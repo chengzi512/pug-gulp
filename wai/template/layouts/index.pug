@@ -1,0 +1,42 @@
+include ../mixin/mixin.pug
+
+doctype html
+html.no-js(lang="zh-CN")
+    head
+        meta(http-equiv='content-type', content='text/html;charset=UTF-8')
+        meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
+        meta(name="viewport", content="width=device-width,initial-scale=1,maximum-scale=1, user-scalable=no")
+        +meta('keyword','')
+        +meta('description','')
+        |
+        | <!-- Set render engine for 360 browser -->
+        +meta('renderer','webkit')
+        |
+        |<!-- Add to homescreen for Safari on iOS -->
+        +meta('apple-mobile-web-app-capable','yes')
+        +meta('apple-mobile-web-app-status-bar-style','black')
+        +meta('apple-mobile-web-app-title','')
+        |
+        |<!-- Tile icon for Win8 (144x144 + tile color) -->
+        +meta('msapplication-TileColor','#0e90d2')
+        link(rel='stylesheet', href='./content/index.min.css')
+        block link
+        title
+            block title
+        block head
+        |
+        |<!--[if lt IE 9]>
+        #doc-modal-1.am-modal.am-modal-no-btn.am-modal-active(tabindex="-1", style="display: block; width: 400px; margin-left: -200px; margin-top: -112px;")
+            .am-modal-dialog
+                .am-modal-hd 安全卫士提醒
+                .am-modal-bd 你的浏览器太古董了，还不换一个你就奥特曼了
+                    a.am-btn.am-btn-danger.am-btn-sm.am-radius(href="http://browsehappy.com/", target="_blank", rel="nofollow") 速速点击换一个
+        |
+        |<![endif]-->
+    body
+        block body
+        block header
+        block aside
+        #content
+            block content
+block script

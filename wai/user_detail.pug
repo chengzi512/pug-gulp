@@ -1,0 +1,395 @@
+extends ./template/layouts/index.pug
+include ./template/layouts/header
+include ./template/layouts/aside
+
+block content
+    #w-container.user-detail
+        #nav
+            ul
+                li
+                    a User Management
+                    span >
+                li
+                    a User List
+                    span >
+                li
+                    a U39192492
+                    span >
+                li
+                    a Rewards
+                    span /
+                li
+                    a Suspension
+                    span /
+                li
+                    a Restriction
+        #ban
+            ul
+                li
+                    .pic
+                        img(src='./content/imgs/pics.png')
+                    .btns
+                        a#deleteAccount.btn1.cursor Delete Acount
+                        a.btn1(href='./rewards_restriction.html') Reward/Account Ban
+        section.under_line
+            table.table
+                tr
+                    td(style="width: 160px;") Username:
+                    td._name
+                        span LilyLee
+                    td(style="width: 120px;") Eamil:
+                    td lily@gmail.com
+                    td(style="width: 80px;") Energy:
+                    td Infinite
+                tr
+                    td User ID:
+                    td 39192492
+                    td Social Accounts:
+                    td Facebook,weChat
+                    td Spins:
+                    td 5
+                tr
+                    td Registration Time:
+                    td 03/10/2017 05:00:00 AM
+                    td Account Type:
+                    td Eamil
+                    td Coins:
+                    td 60
+        section.under_line#question
+            .toolbar-group
+                .title.fl Question
+                .input.fr
+                    input(placeholder="Search by Question ID")
+            ._title.fc(data-collapse='q-table')
+                span Published Question(102)
+            .fc.q-table(style='display: none;')
+                table
+                    thead
+                        tr
+                            th Question ID
+                            th Submitted By
+                            th User ID
+                            th Approval Date & Time
+                            th Language
+                            th Status
+                            th Correct Answer
+                            th Answer2
+                            th Answer3
+                            th Answer4
+                            th Picture
+                            th Action
+                    tbody
+                        tr
+                            td khbjjjb-0056b
+                            td lilyLEE
+                            td U565464
+                            td 07/01/2017 11:00:01 AM
+                            td English
+                            td.issued Published
+                            td.a1 sfdsds
+                            td.a fsdfds
+                            td.a fsdfds
+                            td.a fsdfds
+                            td.text-center [
+                                span.view View
+                                | ]
+                            td.text-center
+                                a.red Delete
+                                a.yellow Take Out
+                                a.blue Details
+                        tr
+                            td khbjjjb-0056b
+                            td lilyLEE
+                            td U565464
+                            td 07/01/2017 11:00:01 AM
+                            td English
+                            td.ignore Out of Rotation
+                            td.a1 sfdsds
+                            td.a fsdfds
+                            td.a fsdfds
+                            td.a fsdfds
+                            td.text-center [
+                                span.view View
+                                | ]
+                            td.text-center
+                                a.red Delete
+                                a.yellow Take Out
+                                a.blue Details
+                .pager
+                    ul
+                        li.prev
+                            a Prev
+                        li
+                            a(href='#') 1
+                        li
+                            a.active 2
+                        li.more
+                            a ...
+                        li.next
+                            a Next
+        section.under_line
+            div
+                ._title(data-collapse='p-table')
+                    span Pending Question(2)
+                .fc.p-table(style='display: none;')
+                    table
+                        thead
+                            tr
+                                th Question ID
+                                th Submitted By
+                                th User ID
+                                th Approval Date & Time
+                                th Language
+                                th Status
+                                th Correct Answer
+                                th Answer2
+                                th Answer3
+                                th Answer4
+                                th Picture
+                                th Action
+                        tbody
+                            tr
+                                td khbjjjb-0056b
+                                td lilyLEE
+                                td U565464
+                                td 07/01/2017 11:00:01 AM
+                                td English
+                                td.status Pending
+                                    td.a1 sfdsds
+                                    td.a fsdfds
+                                    td.a fsdfds
+                                    td.a fsdfds
+                                    td [
+                                        span.view View
+                                        | ]
+                                td.link1
+                                    a.green Approve
+                                    a.red Reject
+                                    a.blue Details
+            div
+                ._title(data-collapse='d-table')
+                    span Rejected Question(2)
+                .fc.d-table(style='display: none;')
+                    table
+                        thead
+                            tr
+                                th Question ID
+                                th Submitted By
+                                th User ID
+                                th Approval Date & Time
+                                th Language
+                                th Status
+                                th Correct Answer
+                                th Answer2
+                                th Answer3
+                                th Answer4
+                                th Picture
+                                th Action
+                        tbody
+                            tr
+                                td khbjjjb-0056b
+                                td lilyLEE
+                                td U565464
+                                td 07/01/2017 11:00:01 AM
+                                td English
+                                td.status Rejected
+                                td.a1 sfdsds
+                                td.a fsdfds
+                                td.a fsdfds
+                                td.a fsdfds
+                                td [
+                                    span.view View
+                                    | ]
+                                td.text-center
+                                    a.green Reprove
+                                    a.blue Details
+        section.under_line#friends
+            .toolbar-group
+                .title.fl Friends
+                .input.fr
+                    input(placeholder='Search by User ID')
+            ._title.fc(data-collapse='f-table')
+                span Friend List(7)
+            .fc.f-table(style='display: none;')
+                table
+                    thead
+                        tr
+                            th Friends ID
+                            th Username
+                            th Friends Since
+                            th(colspan=2) # of Batfiles
+                            th(colspan=2) # of Chat
+                    tbody
+                        tr
+                            td khbjjjb
+                            td U565464
+                            td 07/01/2017 11:00:01 AM
+                            td 3
+                            td
+                                span.history History
+                            td 260
+                            td
+                                span.history History
+        section.under_line#report
+            .toolbar-group
+                .title.fl Report History
+                .input.fr
+                    input(placeholder='Search by Report ID')
+            ._title.fc(data-collapse='r-table')
+                span Being Reported(4)
+            .fc.r-table(style='display: none;')
+                table
+                    thead
+                        tr
+                            th Ticket ID
+                            th Reporter
+                            th Reporter ID
+                            th Status
+                            th Submission Time
+                            th Ticket Issued Time
+                            th Category
+                            th description
+                            th Strike
+                            th Action
+                    tbody
+                        tr
+                            td R05464644-0025
+                            td chisfhisd
+                            td U565464
+                            td.issued issued
+                            td 07/01/2017 11:00:01 AM
+                            td 07/01/2017 11:00:01 AM
+                            td User Account
+                            td sdfsdfsdsdfsd sdfvdsf
+                            td 1
+                            td &nbsp;
+                        tr
+                            td R05464644-0025
+                            td chisfhisd
+                            td U565464
+                            td.ignore ignore
+                            td 07/01/2017 11:00:01 AM
+                            td 07/01/2017 11:00:01 AM
+                            td User Account
+                            td sdfsdfsdsdfsd sdfvdsf
+                            td 1
+                            td &nbsp;
+            ._title.fc(data-collapse='e-table')
+                span Reported(4)
+            .fc.e-table(style='display: none;')
+                table
+                    thead
+                        tr
+                            th Ticket ID
+                            th Offender
+                            th Reporter ID
+                            th Status
+                            th Submission Time
+                            th Ticket Issued Time
+                            th Category
+                            th description
+                            th Strike
+                            th Action
+                    tbody
+                        tr
+                            td R05464644-0025
+                            td chisfhisd
+                            td U565464
+                            td.ignore ignore
+                            td 07/01/2017 11:00:01 AM
+                            td 07/01/2017 11:00:01 AM
+                            td User Account
+                            td sdfsdfsdsdfsd sdfvdsf
+                            td 1
+                            td &nbsp;
+                        tr
+                            td R05464644-0025
+                            td chisfhisd
+                            td U565464
+                            td.issued issued
+                            td 07/01/2017 11:00:01 AM
+                            td 07/01/2017 11:00:01 AM
+                            td User Account
+                            td sdfsdfsdsdfsd sdfvdsf
+                            td 1
+                            td &nbsp;
+        section.under_line#battle
+            .toolbar-group
+                .fl
+                    .title Battle History
+                    ul.dec
+                        li Total Win IClassic):2
+                        li Total Lost IClassic):1
+                        li W/L IClassic):66.6%
+                .input.fr.pt30
+                    input(placeholder='Search by User ID')
+            ._title.fc(data-collapse='t-table')
+                span Battle History(4)
+            .fc.t-table(style='display: none;')
+                table
+                    thead
+                        tr
+                            th Game Mode
+                            th Oppenment(s)
+                            th Time
+                            th Resules
+                            th Rewards(Coins)
+                    tbody
+                        tr
+                            td chisfhisd
+                            td U565464
+                            td 07/01/2017 11:00:01 AM
+                            td W
+                            td 3
+        section.under_line#purchase
+            .toolbar-group
+                .title.fl Purchase History
+                .input.fr
+                    input(placeholder='Search by Purchase ID')
+            ._title.fc(data-collapse='h-table')
+                span Purchase History(2)
+            .fc.h-table(style='display: none;')
+                table
+                    thead
+                        tr
+                            th Purchase ID
+                            th Names
+                            th Amcount
+                            th Price(USD)
+                            th Payment Method
+                            th Time
+                    tbody
+                        tr
+                            td P024541212
+                            td Cokis
+                            td 50
+                            td 4.99
+                            td Apple ID
+                            td 07/01/2017 11:00:01 AM
+    #stiky
+        .menu
+            ul
+                li
+                    a(href='#question') Question
+                li
+                    a(href='#friends') Friends
+                li
+                    a(href='#report') Report History
+                li
+                    a(href='#battle') Battle History
+                li
+                    a(href='#purchase') Purchase History
+        ._top
+            a(href='#ban') Top
+    .modal
+        .modal-dialog
+            .modal-hd
+                span.modal-close &nbsp;
+            .modal-bd
+                div Are you sure to delete this account?
+            .modal-footer
+                span.modal-btn.modal-cancel No
+                span.modal-btn.modal-confirm Yes
+block script
+    script(src='./index.min.js')
+

@@ -1,0 +1,108 @@
+extends ./template/layouts/index.pug
+include ./template/layouts/header
+include ./template/layouts/aside
+
+
+block content
+    #w-container
+        #nav
+            ul
+                li
+                    a User Management
+                    span >
+                li
+                    a User List
+                    span >
+                li
+                    a U39192492
+                    span >
+                li
+                    a Rewards
+                    span /
+                li
+                    a Suspension
+                    span /
+                li
+                    a Restriction
+        #ban
+            ul
+                li
+                    .pic
+                        img(src='./content/imgs/pics.png')
+                    a.btn(href='./user_management.html') Back
+        section.under_line
+            table.table
+                tr
+                    td(style="width: 160px;") Username:
+                    td
+                        span.border._name LilyLee
+                    td(style="width: 120px;") Eamil:
+                    td lily@gmail.com
+                    td(style="width: 80px;") Energy:
+                    td Infinite
+                tr
+                    td User ID:
+                    td 39192492
+                    td Social Accounts:
+                    td Facebook,weChat
+                    td Spins:
+                    td 5
+                tr
+                    td Registration Time:
+                    td 03/10/2017 05:00:00 AM
+                    td Account Type:
+                    td Eamil
+                    td Coins:
+                    td 60
+        section
+            table.table
+                tr
+                    td.red(colspan="2") Current Ban
+                    td.red(colspan="2") Reward Player
+                tr
+                    td(rowspan=2, style='width: 160px;') Account Ban until
+                    td(rowspan=2)
+                        span.border 07/30/2017 12:00:00 PM
+                    td(style='width:80px;') Spins:
+                    td
+                        span.border(style='min-width:60px;') 5
+                tr
+                    td Coins:
+                    td
+                        span.border(style='min-width:60px;') 60
+        section.no-border
+            ul.rewards
+                li
+                    div
+                        span.checkbox.checked
+                        span None / 无操作
+                li
+                    div
+                        span.checkbox
+                        span Set Profile Pic to Default / 把头像设置为默认
+                    div
+                        span.checkbox
+                        span Set Wallpager Pic to Default / 把墙纸设置为默认
+                li
+                    div
+                        span Ban Account for
+                        span.border(style='min-width:60px;') 0
+                        select
+                            option(value="0", selected=) HOURS
+                            option(value="1") DAYS
+                            option(value="2") MONTHS
+                li
+                    div Send Message to User
+                    div
+                        select
+                            option(value="0", selected=) None
+                            option(value="1") Generate
+            .msg
+                p
+                    | A notification message will automatically generated here.
+                    | based on the restrction/suspension the user is given.
+                    | The user will receive the message next time he/she logs in the app.
+                p
+                    | GM can modify the message by clicking this text box
+            .btns.fr
+                .btn Process

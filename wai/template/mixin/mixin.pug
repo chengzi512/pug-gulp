@@ -1,0 +1,7 @@
+mixin meta(name,content)
+    - content||(content='')
+    meta(name=name, content=content)&attributes(attributes)
+
+mixin link(href,rel)
+    - rel||(rel='stylesheet')
+    link(rel=rel, href=href)&attributes(attributes)

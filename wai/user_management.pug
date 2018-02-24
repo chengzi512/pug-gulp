@@ -1,0 +1,50 @@
+extends ./template/layouts/index.pug
+include ./template/layouts/header
+include ./template/layouts/aside
+
+block content
+    #w-container
+        .btn-groups.fr
+            .search.fr
+                .s-icon.fl
+                input.s-input(type="search", placeholder='Search by User ID')
+            .link.fr Export Data
+        #user-list.fc
+            table
+                thead
+                    tr
+                        th User
+                        th User ID
+                        th Registration Time
+                        th Email
+                        th Facebook
+                        th Wechat
+                        th Published
+                        th # of Friends
+                        th Action
+                tbody
+                    tr
+                        td shulbba
+                        td 57295739
+                        td 07/01/2017 11:00:01 AM
+                        td mthum@live.com
+                        td.text-center Y
+                        td.text-center &nbsp;
+                        td.text-center 25
+                        td.text-center 5
+                        td.link1
+                            a.details(href='./user_detail.html') Details
+                            a.ban(href='./rewards_restriction.html') Ban
+
+                    tr
+                        td shulbba
+                        td 57295739
+                        td 07/01/2017 11:00:01 AM
+                        td mthum@live.com
+                        td.text-center &nbsp;
+                        td.text-center Y
+                        td.text-center 25
+                        td.text-center 5
+                        td.link1
+                            a.details(href='./user_detail.html') Details
+                            a.ban(href='./rewards_restriction.html') Ban
